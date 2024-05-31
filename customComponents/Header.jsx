@@ -60,12 +60,14 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    borderColor: "black",
-    height: 60,
+    height: 50,
+    width: 230,
     margin: 12,
     borderWidth: 0.5,
     paddingVertical: 10,
     paddingLeft: 55,
+    backgroundColor: "white",
+    borderRadius: 15
   },
 
   searchBox: {
@@ -73,8 +75,8 @@ const styles = StyleSheet.create({
   },
 
   searchIcon: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
     postion: "absolute",
     top: -55,
     left: 20,
@@ -87,3 +89,4 @@ const styles = StyleSheet.create({
     borderRadius: 90,
   },
 });
+
