@@ -63,7 +63,6 @@ const styles = StyleSheet.create({
     height: 50,
     width: 230,
     margin: 12,
-    borderWidth: 0.5,
     paddingVertical: 10,
     paddingLeft: 55,
     backgroundColor: "white",
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     postion: "absolute",
-    top: -55,
+    top: -50,
     left: 20,
   },
 
