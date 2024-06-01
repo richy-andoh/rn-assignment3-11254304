@@ -72,7 +72,7 @@ const data = [
   },
 ];
 
-const Task = () => {
+const Categories = () => {
   return (
     <>
       <Text style={styles.catText}>Categories</Text>
@@ -102,7 +102,7 @@ const Task = () => {
   );
 };
 
-export default Task;
+export default Categories;
 
 const styles = StyleSheet.create({
   catText: {

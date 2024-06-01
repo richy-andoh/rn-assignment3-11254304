@@ -1,5 +1,4 @@
 import {
-  SectionList,
   StyleSheet,
   Text,
   TouchableOpacity,
