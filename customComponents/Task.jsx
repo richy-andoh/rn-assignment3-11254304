@@ -5,9 +5,12 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Image
 } from "react-native";
+
 import React from "react";
 
+//import task1 from "../assets/task1.png"
 const data = [
   {
     id: "1",
@@ -73,34 +76,46 @@ const data = [
 
 const Task = () => {
   return (
-    <FlatList
-      horizontal={true}
-      data={data}
-      keyExtractor={(item) => item.id}
-      renderItem={({ item }) => (
-        <TouchableOpacity style={styles.task} onPress={() => alert("Hello")}>
-          <View>
-            <Text>{item.title}</Text>
-            <Text>{item.number}</Text>
-            <Image
-              source={{
-                uri: item.imageUrl,
-              }}
-            />
-          </View>
-        </TouchableOpacity>
-      )}
-    />
+    <>
+        <Text style={styles.catText}>Categories</Text>
+      <FlatList
+              horizontal={true}
+              data={data}
+              keyExtractor={(item) => item.id}
+              renderItem={({ item }) => (
+                  <TouchableOpacity style={styles.task} onPress={() => alert("Hello")}>
+                      <View>
+                          <Text>{item.title}</Text>
+                          <Text>{item.number}</Text>
+                          <Image
+                              style={styles.taskImg}
+                              source={{
+                                  uri: item.imageUrl,
+                              }} />
+                      </View>
+                  </TouchableOpacity>
+              )} /></>
   );
 };
 
 export default Task;
 
 const styles = StyleSheet.create({
+    catText: {
+       paddingVertical: 5,
+       fontWeight: 700,
+       fontSize: 24
+    },
   task: {
-    padding: 10,
+    padding: 20,
     margin: 4,
-    // backgroundColor: "red",
+    backgroundColor: "white",
     borderRadius: 10,
   },
+
+  taskImg: {
+    width: 120,
+    height: 120,
+    resizeMode: "contain"
+  }
 });
