@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View, Image, TextInput } from "react-native";
 import userPrifle from "../assets/user-profile.png";
 import search from "../assets/search.png";
+import slider from "../assets/slider.png"
 
 const Header = () => {
   return (
     <View>
       <View style={styles.headerContainer}>
         <View>
-          <Text style={{ fontSize: 30, fontWeight: "bold" }}>Hello , Devs</Text>
+          <Text style={{ fontSize: 32, fontWeight: "700", lineHeight: 38.4 }}>Hello , Devs</Text>
           <Text style={{ paddingTop: 2 }}>14 tasks today</Text>
         </View>
         <View style={styles.profileContainer}>
@@ -17,11 +18,15 @@ const Header = () => {
 
       <View style={styles.searchContainer}>
         <View style={styles.searchBox}>
-          <TextInput style={styles.input} placeholder="Search" />
+          <TextInput style={styles.input} placeholder="Search" placeholderTextColor="#000" />
           <Image style={styles.searchIcon} source={search} />
         </View>
 
-        <View style={styles.toggleBox}></View>
+        <View style={styles.toggleSlider}>
+          <Image style={styles.sliderImg}
+            source={slider}
+          />
+        </View>
       </View>
     </View>
   );
@@ -60,13 +65,15 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    height: 50,
+    height: 54,
     width: 230,
-    margin: 12,
+    marginTop: 25,
     paddingVertical: 10,
     paddingLeft: 55,
     backgroundColor: "white",
-    borderRadius: 15
+    borderRadius: 15,
+    fontWeight: "700",
+    border: 1
   },
 
   searchBox: {
@@ -77,15 +84,25 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     postion: "absolute",
-    top: -50,
-    left: 20,
+    top: -36,
+    left: 11,
   },
 
-  toggleBox: {
-    width: 50,
-    height: 50,
+  toggleSlider: {
+    width: 55,
+    height: 54,
     backgroundColor: "red",
-    borderRadius: 90,
+    borderRadius: 20,
+    marginTop: 22,
+    color: "#ffff"
   },
+
+  sliderImg: {
+    width: 34,
+    height: 34,
+    marginTop: 10,
+    marginHorizontal: 10,
+    color: "#ffff"
+  }
 });
 

@@ -7,8 +7,8 @@ const MainScreen = () => {
   return (
     <View style={styles.mainScreen}>
         <Header />
-        <Task />
         <Categories />
+        <Task />
     </View>
   );
 };
