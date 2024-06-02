@@ -47,7 +47,7 @@ const items = [
   {
     id: "6",
     number: "12 Tasks",
-    title: "Shopp",
+    title: "Shopping",
     imageUrl:
       "https://i.im.ge/2024/06/02/K0i9Fa.task6.jpeg",
   },
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
   },
 
   num: {
-     paddingVertical: 4
+     paddingVertical: 6
   },
   catImg: {
     width: 120,

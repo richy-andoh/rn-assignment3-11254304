@@ -5,13 +5,13 @@ const sections = [
   {
     title: "Ongoing Tasks",
     data: [
-      "Morning Run",
-      "Math Homework",
+      "Mobile App Development",
+      "Web Development",
+      "Physics Assignment",
       "Dinner Preparation",
       "Clean Kitchen",
       "Read Novel",
       "Grocery Shopping",
-      "Clean",
       "Yoga Session",
     ],
   },

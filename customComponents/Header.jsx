@@ -1,14 +1,16 @@
 import { StyleSheet, Text, View, Image, TextInput } from "react-native";
 import userPrifle from "../assets/user-profile.png";
 import search from "../assets/search.png";
-import slider from "../assets/slider.png"
+import slider from "../assets/slider.png";
 
 const Header = () => {
   return (
     <View>
       <View style={styles.headerContainer}>
         <View>
-          <Text style={{ fontSize: 32, fontWeight: "700", lineHeight: 38.4 }}>Hello , Devs</Text>
+          <Text style={{ fontSize: 32, fontWeight: "700", lineHeight: 38.4 }}>
+            Hello , Devs
+          </Text>
           <Text style={{ paddingTop: 2 }}>14 tasks today</Text>
         </View>
         <View style={styles.profileContainer}>
@@ -18,14 +20,27 @@ const Header = () => {
 
       <View style={styles.searchContainer}>
         <View style={styles.searchBox}>
-          <TextInput style={styles.input} placeholder="Search" placeholderTextColor="#000" />
+          <TextInput
+            style={styles.input}
+            placeholder="Search"
+            placeholderTextColor="#000"
+          />
           <Image style={styles.searchIcon} source={search} />
         </View>
 
         <View style={styles.toggleSlider}>
-          <Image style={styles.sliderImg}
+          {/* <Image style={styles.sliderImg}
             source={slider}
-          />
+          /> */}
+
+          <TouchableOpacity
+            onPress={() => alert("Button Pressed!")}
+          >
+            <Image
+              source={slider}
+              style={styles.buttonImg}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -73,7 +88,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 15,
     fontWeight: "700",
-    border: 1
+    border: 1,
   },
 
   searchBox: {
@@ -81,10 +96,10 @@ const styles = StyleSheet.create({
   },
 
   searchIcon: {
-    width: 25,
-    height: 25,
+    width: 28,
+    height: 28,
     postion: "absolute",
-    top: -36,
+    top: -34,
     left: 11,
   },
 
@@ -94,15 +109,14 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     borderRadius: 20,
     marginTop: 22,
-    color: "#ffff"
+    color: "#ffff",
   },
 
-  sliderImg: {
+  buttonImg: {
     width: 34,
     height: 34,
     marginTop: 10,
     marginHorizontal: 10,
-    color: "#ffff"
-  }
+    color: "#ffff",
+  },
 });
-
