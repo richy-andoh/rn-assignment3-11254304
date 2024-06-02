@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TextInput } from "react-native";
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from "react-native";
 import userPrifle from "../assets/user-profile.png";
 import search from "../assets/search.png";
 import slider from "../assets/slider.png";
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    height: 54,
+    height: 58,
     width: 230,
     marginTop: 25,
     paddingVertical: 10,
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     width: 28,
     height: 28,
     postion: "absolute",
-    top: -34,
+    top: -41,
     left: 11,
   },
 
