@@ -46,7 +46,7 @@ git clone <repository-url>
 cd rn-assignment3-ID
 npm install
 
-```
+
 rn-assignment3-ID/
 ├── App.js
 ├── components/
