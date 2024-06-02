@@ -70,6 +70,8 @@ rn-assignment3-ID/
 ├── README.md
 └── package.json
 
+```
+
 ## Screenshots
 
 ## Usage
