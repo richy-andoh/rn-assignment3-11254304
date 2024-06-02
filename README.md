@@ -14,7 +14,7 @@ The assignment requires recreating a UI design mockup using various React Native
 - **TextInput**: Component for accepting user input.
 - **StyleSheet**: Used to create and manage styles.
 - **Button**: Component used to trigger actions.
-- **FlatList**: Used for rendering lists efficiently.
+- **SectionList**: Used for rendering lists efficiently.
 - **Image**: Component for displaying images.
 
 ### Custom Components
@@ -27,7 +27,7 @@ The application includes at least eight categories such as Exercise, Study, Code
 
 ### Ongoing Tasks
 
-A list of 15 ongoing tasks is provided, which is displayed using a `FlatList`.
+A list of 10 ongoing tasks is provided, which is displayed using a `SectionList`.
 
 ### Styling
 
@@ -35,19 +35,19 @@ The application is styled to closely match the provided UI design using React Na
 
 ## Repository
 
-The repository is named `rn-assignment3-ID` (e.g., `rn-assignment3-1129884`).
+The repository is named `rn-assignment3-11254304
 
 ### Installation
 
 Clone the repository to your local machine:
 
 ```bash
-git clone <repository-url>
-cd rn-assignment3-ID
+git clone https://github.com/richy-andoh/rn-assignment3-11254304.git
+cd rn-assignment3-11254304
 npm install
 
 
-rn-assignment3-ID/
+rn-assignment3-11254304/
 ├── App.js
 ├── customComponents/
 │   ├── Categories.jsx
@@ -76,9 +76,10 @@ rn-assignment3-ID/
 
 ## Usage
 
-### To start the application, run
+### To start the application, run:
 
 ```bash
+
 npm start
 
 ```
