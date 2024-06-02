@@ -49,23 +49,23 @@ npm install
 
 rn-assignment3-ID/
 ├── App.js
-├── components/
-│   ├── CustomButton.js
-│   ├── CustomTextInput.js
-│   ├── TaskItem.js
+├── customComponents/
+│   ├── Categories.jsx
+│   ├── Header.jsx
+│   ├── Tasks.jsx
 │   └── ...
 ├── assets/
-│   ├── categoryIcons/
-│   │   ├── exercise.png
+│   ├── HeaderIcons/
+│   │   ├── user-profile.png
 │   │   ├── study.png
 │   │   └── ...
 │   ├── taskImages/
-│   │   ├── task1.png
-│   │   ├── task2.png
+│   │   ├── task1.jpeg
+│   │   ├── task2.jpeg
 │   │   └── ...
 ├── screens/
 │   ├── MainScreen.js
-│   ├── Categories.js
+│
 │   └── ...
 ├── README.md
 └── package.json
