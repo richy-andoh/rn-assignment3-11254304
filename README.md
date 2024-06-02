@@ -46,9 +46,7 @@ git clone <repository-url>
 cd rn-assignment3-ID
 npm install
 
-
 ## Screenshots
-
 
 rn-assignment3-ID/
 ├── App.js
