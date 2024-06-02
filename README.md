@@ -46,8 +46,7 @@ git clone <repository-url>
 cd rn-assignment3-ID
 npm install
 
-## Screenshots
-
+```
 rn-assignment3-ID/
 ├── App.js
 ├── components/
@@ -71,9 +70,13 @@ rn-assignment3-ID/
 ├── README.md
 └── package.json
 
+## Screenshots
+
 ## Usage
 
 ### To start the application, run
 
 ```bash
 npm start
+
+```
