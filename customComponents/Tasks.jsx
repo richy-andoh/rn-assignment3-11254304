@@ -3,9 +3,8 @@ import {
   Text,
   TouchableOpacity,
   View,
-  FlatList,
+  ScrollView
 } from "react-native";
-import Task from "./Categories";
 
 const tasks = [
   "Exercise",
@@ -20,12 +19,11 @@ const tasks = [
 
 const Tasks = () => {
   return (
-    <>
-    <Text style={styles.taskTitle}>Ongoing Task</Text>
-      <FlatList
+    <ScrollView style={styles.taskContainer}>
+      <Text style={styles.taskTitle}>Ongoing Task</Text>
+      {/* <SectionList
         style={styles.taskContainer}
-        horizontal={false}
-        data={tasks}
+        sections={tasks}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity style={styles.taskList}>
@@ -34,21 +32,28 @@ const Tasks = () => {
             </View>
           </TouchableOpacity>
         )}
-      />
-    </>
+      /> */}
+      {tasks.map((task, index) => (
+        <TouchableOpacity key={index} style={styles.taskList}>
+          <View>
+            <Text>{task}</Text>
+          </View>
+        </TouchableOpacity>
+      ))}
+    </ScrollView>
   );
 };
 
 export default Tasks;
 
 const styles = StyleSheet.create({
-    taskTitle: {
-        paddingVertical: 5,
-        paddingLeft: 1,
-        //fontWeight: "bold",
-        fontSize: 24,
-        marginTop: 20
-    },
+  taskTitle: {
+    paddingVertical: 5,
+    paddingLeft: 1,
+    //fontWeight: "bold",
+    fontSize: 24,
+    marginTop: 20,
+  },
 
   taskContainer: {},
 

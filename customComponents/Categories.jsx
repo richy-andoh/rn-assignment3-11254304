@@ -1,5 +1,4 @@
 import {
-  FlatList,
   ScrollView,
   StyleSheet,
   Text,
@@ -9,76 +8,87 @@ import {
 } from "react-native";
 
 //import task1 from "../assets/task1.png"
-const data = [
+const items = [
   {
     id: "1",
     number: 1,
     title: "Morning Run",
-    imageUrl: "../assets/task1.png",
+    imageUrl:
+      "https://app.gemoo.com/share/image-annotation/655641717780127744?codeId=PaZVRk3Ka9RgQ",
   },
   {
     id: "2",
     number: 2,
     title: "Math Homework",
-    imageUrl: "../assets/task2.png",
+    imageUrl:
+      "https://app.gemoo.com/share/image-annotation/655641715032829952?codeId=PaZVRk3Ka9RgQ",
   },
   {
     id: "3",
     number: 3,
     title: "Build React App",
-    imageUrl: "../assets/task4.png",
+    imageUrl:
+      "https://app.gemoo.com/share/image-annotation/655641712214286336?codeId=PaZVRk3Ka9RgQ",
   },
   {
     id: "4",
     number: 4,
     title: "Dinner Preparation",
-    imageUrl: "../assets/task4.png",
+    imageUrl:
+      "https://app.gemoo.com/share/image-annotation/655640240885948416?codeId=PaZVRk3Ka9RgQ",
   },
   {
     id: "5",
     number: 5,
     title: "Read Novel",
-    imageUrl: "../assets/task5.png",
+    imageUrl:
+      "https://app.gemoo.com/share/image-annotation/655640066851745792?codeId=PaZVRk3Ka9RgQ",
   },
   {
     id: "6",
     number: 6,
     title: "Grocery Shopping",
-    imageUrl: "../assets/task6.png",
+    imageUrl:
+      "https://app.gemoo.com/share/image-annotation/655639949813886976?codeId=PaZVRk3Ka9RgQ",
   },
   {
     id: "7",
     number: 7,
     title: "Clean Kitchen",
-    imageUrl: "../assets/task7.png",
+    imageUrl:
+      "https://app.gemoo.com/share/image-annotation/655639807438184448?codeId=PaZVRk3Ka9RgQ",
   },
   {
     id: "8",
     number: 8,
     title: "Meditation",
-    imageUrl: "../assets/task8.png",
+    imageUrl:
+      "https://app.gemoo.com/share/image-annotation/655638782442622976?codeId=PaZVRk3Ka9RgQ",
   },
   {
     id: "9",
     number: 9,
     title: "Yoga Session",
-    imageUrl: "../assets/task9.png",
+    imageUrl:
+      "https://app.gemoo.com/share/image-annotation/655641709274050560?codeId=PaZVRk3Ka9RgQ",
   },
   {
     id: "10",
     number: 10,
     title: "Physics Assignment",
-    imageUrl: "../assets/task10.png",
+    imageUrl:
+      "https://app.gemoo.com/share/image-annotation/655636282381574144?codeId=DGYQXB6LRr9g6&origin=imageurlgenerator",
   },
 ];
 
 const Categories = () => {
   return (
-    <>
+    <View>
       <Text style={styles.catText}>Categories</Text>
-      <FlatList
-        horizontal={true}
-        data={data}
+
+      <ScrollView horizontal>
+        {/* <SectionList
+        sections={DATA}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <TouchableOpacity
@@ -97,8 +107,24 @@ const Categories = () => {
             </View>
           </TouchableOpacity>
         )}
-      />
-    </>
+      /> */}
+
+        {items.map((item) => (
+          <TouchableOpacity key={item.id} style={styles.category}>
+            <View>
+              <Text>{item.title}</Text>
+              <Text>{item.number}</Text>
+              <Image
+                style={styles.catImg}
+                source={{
+                  uri: item.imageUrl,
+                }}
+              />
+            </View>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+    </View>
   );
 };
 

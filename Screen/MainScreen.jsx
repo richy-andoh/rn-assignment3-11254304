@@ -1,5 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { StyleSheet, View } from "react-native";
 import Header from "../customComponents/Header";
 import Task from "../customComponents/Tasks";
 import Categories from "../customComponents/Categories";
@@ -17,6 +16,6 @@ export default MainScreen;
 
 const styles = StyleSheet.create({
     mainScreen: {
-        margin: 20,
+      margin: 20,
     }
 });
