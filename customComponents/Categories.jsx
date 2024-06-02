@@ -11,109 +11,89 @@ import {
 const items = [
   {
     id: "1",
-    number: 1,
-    title: "Morning Run",
+    number: "12 Tasks",
+    title: "Exercise",
     imageUrl:
-      "https://app.gemoo.com/share/image-annotation/655641717780127744?codeId=PaZVRk3Ka9RgQ",
+      "https://i.im.ge/2024/06/02/K0iAqK.task1.png",
   },
   {
     id: "2",
-    number: 2,
-    title: "Math Homework",
+    number: "12 Tasks",
+    title: "Study",
     imageUrl:
-      "https://app.gemoo.com/share/image-annotation/655641715032829952?codeId=PaZVRk3Ka9RgQ",
+      "https://i.im.ge/2024/06/02/K0it4F.task2.png",
   },
   {
     id: "3",
-    number: 3,
-    title: "Build React App",
+    number: "12 Tasks",
+    title: "Code",
     imageUrl:
-      "https://app.gemoo.com/share/image-annotation/655641712214286336?codeId=PaZVRk3Ka9RgQ",
+      "https://i.im.ge/2024/06/02/K0iP36.task3.jpeg",
   },
   {
     id: "4",
-    number: 4,
-    title: "Dinner Preparation",
+    number: "12 Tasks",
+    title: "Cook",
     imageUrl:
-      "https://app.gemoo.com/share/image-annotation/655640240885948416?codeId=PaZVRk3Ka9RgQ",
+      "https://i.im.ge/2024/06/02/K0imRy.task4.jpeg",
   },
   {
     id: "5",
-    number: 5,
-    title: "Read Novel",
+    number: "12 Tasks",
+    title: "Read",
     imageUrl:
-      "https://app.gemoo.com/share/image-annotation/655640066851745792?codeId=PaZVRk3Ka9RgQ",
+      "https://i.im.ge/2024/06/02/K0ij9J.task5.jpeg",
   },
   {
     id: "6",
-    number: 6,
-    title: "Grocery Shopping",
+    number: "12 Tasks",
+    title: "Shopp",
     imageUrl:
-      "https://app.gemoo.com/share/image-annotation/655639949813886976?codeId=PaZVRk3Ka9RgQ",
+      "https://i.im.ge/2024/06/02/K0i9Fa.task6.jpeg",
   },
   {
     id: "7",
-    number: 7,
-    title: "Clean Kitchen",
+    number: "12 Tasks",
+    title: "Clean",
     imageUrl:
-      "https://app.gemoo.com/share/image-annotation/655639807438184448?codeId=PaZVRk3Ka9RgQ",
+      "https://i.im.ge/2024/06/02/K0ihqL.task7.jpeg",
   },
-  {
-    id: "8",
-    number: 8,
-    title: "Meditation",
-    imageUrl:
-      "https://app.gemoo.com/share/image-annotation/655638782442622976?codeId=PaZVRk3Ka9RgQ",
-  },
-  {
-    id: "9",
-    number: 9,
-    title: "Yoga Session",
-    imageUrl:
-      "https://app.gemoo.com/share/image-annotation/655641709274050560?codeId=PaZVRk3Ka9RgQ",
-  },
+  // {
+  //   id: "8",
+  //   number: 8,
+  //   title: "Meditation",
+  //   imageUrl:
+  //     "https://i.im.ge/2024/06/02/K0i0kx.task8.jpeg",
+  // },
+  // {
+  //   id: "9",
+  //   number: "12 Tasks",
+  //   title: "Exercise",
+  //   imageUrl:
+  //     "https://i.im.ge/2024/06/02/K0iLnc.task9.jpeg",
+  // },
   {
     id: "10",
     number: 10,
-    title: "Physics Assignment",
+    title: "Home Work",
     imageUrl:
-      "https://app.gemoo.com/share/image-annotation/655636282381574144?codeId=DGYQXB6LRr9g6&origin=imageurlgenerator",
+      "https://i.im.ge/2024/06/02/K0iI3T.task10.jpeg",
   },
 ];
 
 const Categories = () => {
   return (
-    <View>
+    <View style={styles.catContainer}>
       <Text style={styles.catText}>Categories</Text>
 
       <ScrollView horizontal>
-        {/* <SectionList
-        sections={DATA}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <TouchableOpacity
-            style={styles.category}
-            onPress={() => alert("Hello")}
-          >
-            <View>
-              <Text>{item.title}</Text>
-              <Text>{item.number}</Text>
-              <Image
-                style={styles.catImg}
-                source={{
-                  uri: item.imageUrl,
-                }}
-              />
-            </View>
-          </TouchableOpacity>
-        )}
-      /> */}
+      
 
         {items.map((item) => (
           <TouchableOpacity key={item.id} style={styles.category}>
             <View>
-              <Text>{item.title}</Text>
-              <Text>{item.number}</Text>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.num}>{item.number}</Text>
               <Image
                 style={styles.catImg}
                 source={{
@@ -125,28 +105,43 @@ const Categories = () => {
         ))}
       </ScrollView>
     </View>
+
   );
 };
 
 export default Categories;
 
 const styles = StyleSheet.create({
+  catContainer: {
+    marginTop: 20
+  }, 
+
   catText: {
     paddingVertical: 5,
     paddingLeft: 2,
-    //fontWeight: "bold",
-    fontSize: 24,
+    fontWeight: "bold",
+    fontSize: 20,
   },
   category: {
-    padding: 20,
+    padding: 23,
     margin: 4,
     backgroundColor: "white",
-    borderRadius: 10,
+    borderRadius: 15,
   },
 
+  title: {
+    fontWeight: "bold",
+    fontSize: 18
+  },
+
+  num: {
+     paddingVertical: 4
+  },
   catImg: {
     width: 120,
     height: 120,
     resizeMode: "contain",
   },
 });
+
+
